@@ -1,0 +1,9 @@
+/* Make sure to add image url in the component */
+bg-image {
+  filter: blur(8px);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Rosarivo&display=swap');
+@import "../node_modules/bulma/sass/utilities/functions.sass";
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+$pottery: #f0cfa4;
+$pottery2: #de8068;
+$pottery3: #68C6DE;
+$pottery3-invert: findColorInvert($pottery3);
+
+// Update Bulma's global variables
+$family-primary: "Rosarivo";
+$family-secondary: "Nunito";
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $pottery2;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+@import "~bulma/sass/utilities/initial-variables.sass";
+@import "~bulma/sass/utilities/derived-variables.sass";
+$addColors: (
+  "secondary": ($pottery3, $pottery3-invert)
+);
+$colors: map-merge($colors, $addColors);
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/bulma.sass";
