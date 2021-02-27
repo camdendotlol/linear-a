@@ -1,9 +1,7 @@
 /* Make sure to add image url in the component */
-bg-image {
-  filter: blur(8px);
-  height: 100%;
+.hero-bg {
+  background-position: center center;
+  /* background-repeat:  no-repeat; */
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }

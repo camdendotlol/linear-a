@@ -2,24 +2,17 @@ import React from 'react'
 
 import heroImage from '../images/knossos-blurred.jpg'
 
-const heroBackgroundCSS = {
-  backgroundPosition: 'center center',
-  backgroundRepeat:  'no-repeat',
-  backgroundAttachment: 'fixed',
-  backgroundSize:  'cover'
-}
-
 const HomePage = () => {
   return (
     <div>
-      <section className='hero is-black is-fullheight-with-navbar' style={{ backgroundImage: `url(${heroImage})`, ...heroBackgroundCSS }}>
+      <section className='hero is-black is-fullheight-with-navbar hero-bg' style={{ backgroundImage: `url(${heroImage})` }}>
         <div className='hero-body'>
           <div className='container has-text-centered'>
             <p className='title is-size-1'>
               What is Linear A?
             </p>
             <p className='subtitle'>
-              Discover the Ancient Mediterranean's most enigmatic writing system
+              Discover the ancient Mediterranean's most enigmatic writing system
             </p>
           </div>
         </div>
