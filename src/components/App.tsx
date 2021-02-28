@@ -1,5 +1,5 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import HomePage from './HomePage'
 import Alphabet from './Alphabet'
@@ -8,6 +8,12 @@ import History from './History'
 import Resources from './Resources'
 
 const App = () => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <div className="App">
       <Navbar />

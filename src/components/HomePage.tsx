@@ -1,55 +1,109 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-import heroImage from '../images/knossos-blurred.jpg'
+import heroImage from '../images/knossos.jpg'
+import alphabetImage from '../images/alphabet_darkened.jpg'
+import textImage from '../images/text-smaller.jpg'
+import frescoImage from '../images/fresco.jpg'
 
 const HomePage = () => {
   return (
     <div>
       <section className='hero is-black is-fullheight-with-navbar hero-bg' style={{ backgroundImage: `url(${heroImage})` }}>
         <div className='hero-body'>
-          <div className='container has-text-centered'>
-            <p className='title is-size-1'>
+          <div className='container has-text-centered hero-text p-4'>
+            <p className='title is-size-1 is-size-2-mobile'>
               What is Linear A?
             </p>
             <p className='subtitle'>
-              Discover the ancient Mediterranean's most enigmatic writing system
+              Dive into the ancient Mediterranean's most enigmatic writing system
             </p>
           </div>
         </div>
       </section>
-      <section className='hero is-secondary is-fullheight'>
+      <section className='hero is-medium is-black'>
         <div className='hero-body'>
           <div className='container has-text-centered'>
-            <p className='title is-size-1'>
-              See the alphabet
+            <p className='is-size-4 is-size-6-mobile'>
+              Linear A was used by the early Minoans, who lived on the island of Crete four thousand years ago. To this day, no one knows what their symbols mean, or even what language they represent.
             </p>
           </div>
         </div>
       </section>
-      <section className='hero is-primary is-fullheight'>
+      <section className='hero is-black is-halfheight hero-bg' style={{ backgroundImage: `url(${frescoImage})`}}>
         <div className='hero-body'>
+          <div className='container has-text-centered hero-text p-4'>
+            <Link to='/history' className='title is-size-1 is-size-2-mobile'>
+              Discover the history &#10132;
+            </Link>
+          </div>
+        </div>
+        <div className='hero-foot'>
           <div className='container has-text-centered'>
-            <p className='title is-size-1'>
-              Explore the texts
+            <p className='is-size-7 hero-text image-credit'>
+              <span><a href="https://flickr.com/photos/41523983@N08/30547636456">'Minoan fresco depicting a bull leaping scene, found in Knossos, 1600-1400 BC, Heraklion Archaeological Museum, Crete' by Carole Raddato on Flickr</a>. <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC BY-SA 2.0</a></span>
             </p>
           </div>
         </div>
       </section>
-      <section className='hero is-secondary is-fullheight'>
+      <section className='hero is-medium is-black'>
         <div className='hero-body'>
           <div className='container has-text-centered'>
-            <p className='title is-size-1'>
-              Discover the history
+            <p className='is-size-4 is-size-6-mobile'>
+              Archaeologists have discovered over a thousand inscriptions, but most contain only a few letters.
             </p>
           </div>
         </div>
       </section>
-      <section className='hero is-primary is-fullheight'>
+      <section className='hero is-black is-halfheight hero-bg' style={{ backgroundImage: `url(${textImage})`}}>
+        <div className='hero-body'>
+          <div className='container has-text-centered hero-text p-4'>
+            <Link to='/texts' className='title is-size-1 is-size-2-mobile'>
+              Explore the texts &#10132;
+            </Link>
+          </div>
+        </div>
+        <div className='hero-foot'>
+          <div className='container has-text-centered'>
+            <p className='is-size-7 hero-text image-credit'>
+              'Inscription [Ε 40]' by <a href='http://chaniamuseum.culture.gr/en/exhibit/585'>Archaeological Museum of Chania</a> under <a href='https://creativecommons.org/licenses/by-nc-nd/3.0/'>CC BY-NC-ND 3.0</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className='hero is-medium is-black'>
         <div className='hero-body'>
           <div className='container has-text-centered'>
-            <p className='title is-size-1'>
-              Read more
+            <p className='is-size-4 is-size-6-mobile'>
+              After several hundred years, the Minoans developed a new writing system - Linear B. Linear B was deciphered in the 1950s. Although Linear A shares many of the same characters, this did not lead to its decipherment.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className='hero is-black is-halfheight hero-bg' style={{ backgroundImage: `url(${alphabetImage})` }}>
+        <div className='hero-body'>
+          <div className='container has-text-centered hero-text p-4'>
+            <Link to='/alphabet' className='title is-size-1 is-size-2-mobile'>
+              See the alphabet &#10132;
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className='hero is-medium is-black'>
+        <div className='hero-body'>
+          <div className='container has-text-centered'>
+            <p className='is-size-4 is-size-6-mobile'>
+              Modern scholarship on Linear A attempts to identify whether the symbols are phonetic, syllabic, logographic, or a combination. Researchers have also tried to determine the language that Linear A represents.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className='hero is-primary is-halfheight'>
+        <div className='hero-body'>
+          <div className='container has-text-centered'>
+            <Link to='/resources' className='title is-size-1 is-size-2-mobile'>
+              Read more &#10132;
+            </Link>
           </div>
         </div>
       </section>

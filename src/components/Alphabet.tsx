@@ -4,7 +4,7 @@ import alphabetFiles from '../utils/alphabetFiles'
 const Alphabet = () => {
   const letterBox = (letterPath: string) => {
     return (
-      <div className='column'>
+      <div className='column' key={letterPath}>
         <div className='box' style={{ width: '164px', height: '164px', marginRight: 'auto', marginLeft: 'auto' }}>
           <figure className='image is-128x128'>
             <img alt={letterPath.substring(10, letterPath.length - 4)} src={letterPath} style={{ position: 'relative', marginTop: '-15px' }}/>

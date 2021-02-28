@@ -6,6 +6,9 @@ const Resources = () => {
       <p>
         Nothing here yet.
       </p>
+      <a href='https://lineara.xyz/'>
+        https://lineara.xyz/
+      </a>
     </div>
   )
 }
