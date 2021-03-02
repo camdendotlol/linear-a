@@ -48,16 +48,18 @@ const AlphabetModal = ({ letter, setModalCharacter, isActive, setModalOpen, alph
     }
   }
 
-  const arrowKeyPress = (e: React.KeyboardEvent<HTMLDivElement>): void => {
+  const watchKeyPress = (e: React.KeyboardEvent<HTMLDivElement>): void => {
     if (e.key === 'ArrowRight') {
       setModalCharacter(alphabet[getNewIndexIncrement(characterIndex)])
     } else if (e.key === 'ArrowLeft') {
       setModalCharacter(alphabet[getNewIndexDecrement(characterIndex)])
+    } else if (e.key === 'Escape') {
+      setModalOpen(false)
     }
   }
 
   return (
-    <div className={isActive ? 'modal is-active' : 'modal'} onKeyDown={e => arrowKeyPress(e)} tabIndex={0} ref={divToFocus} >
+    <div className={isActive ? 'modal is-active' : 'modal'} onKeyDown={e => watchKeyPress(e)} tabIndex={0} ref={divToFocus} >
       <div className='modal-background' onClick={() => setModalOpen(false)} />
       <div className='modal-content'>
         <button

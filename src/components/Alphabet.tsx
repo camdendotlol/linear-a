@@ -25,7 +25,7 @@ const Alphabet: React.FC = () => {
       <div className='column' key={letter.name}>
         <div
           onClick={() => openModal(letter)}
-          className='box'
+          className='box alphabet-box'
           style={boxStyle}
         >
           <figure className='image is-128x128'>
