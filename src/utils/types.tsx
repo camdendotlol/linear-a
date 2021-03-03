@@ -3,3 +3,17 @@ export interface Character {
   path: string,
   unicode: number
 }
+
+export enum ResourceType {
+  Website = 'website',
+  Book = 'book',
+  Video = 'video'
+}
+
+export interface Resource {
+  author: string,
+  title: string,
+  url: string,
+  type: ResourceType,
+  description: string
+}

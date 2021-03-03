@@ -6,7 +6,7 @@ import alphabetImage from '../images/alphabet_darkened.jpg'
 import textImage from '../images/text-smaller.jpg'
 import frescoImage from '../images/fresco.jpg'
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <section className='hero is-black is-fullheight-with-navbar hero-bg' style={{ backgroundImage: `url(${heroImage})` }}>
@@ -98,11 +98,11 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className='hero is-primary is-halfheight'>
+      <section className='hero is-black is-halfheight'>
         <div className='hero-body'>
           <div className='container has-text-centered'>
             <Link to='/resources' className='title is-size-1 is-size-2-mobile'>
-              Read more &#10132;
+              More resources &#10132;
             </Link>
           </div>
         </div>

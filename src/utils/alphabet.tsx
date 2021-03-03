@@ -1,6 +1,8 @@
 // There's ugly formatting here because I used scripts to generate some of the properties.
 
-const alphabet = [
+import { Character } from './types'
+
+const alphabet: Array<Character> = [
   { name: 'A001', path: `${process.env.PUBLIC_URL}/alphabet/A001.svg`, unicode: 67072 },
   { name: 'A002', path: `${process.env.PUBLIC_URL}/alphabet/A002.svg`, unicode: 67073 },
   { name: 'A003', path: `${process.env.PUBLIC_URL}/alphabet/A003.svg`, unicode: 67074 },

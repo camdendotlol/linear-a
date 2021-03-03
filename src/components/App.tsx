@@ -7,7 +7,7 @@ import Texts from './Texts'
 import History from './History'
 import Resources from './Resources'
 
-const App = () => {
+const App: React.FC = () => {
   const { pathname } = useLocation()
 
   useEffect(() => {

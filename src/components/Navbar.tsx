@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import icon from '../images/icon.png'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false)
 
   const checkIfActive = (base: string) => {
