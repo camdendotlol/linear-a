@@ -1,5 +1,33 @@
 # What is Linear A?
 
-Todo: README.md
-
 (The development version of this site is temporarily available at [https://la.camdenmecklem.com/](https://la.camdenmecklem.com/))
+
+Linear A is one of the most mysterious writing scripts in world history. Used by the Minoans on ancient Crete, Linear A seems to have been used in a wide range of fields, from trading to religious rites. Even as later Minoan scripts, such as Linear B, have been deciphered, Linear A remains undeciphered. Over the years, scholars have theorized many different languages that it might represent, ranging from an early form of Greek to an Indo-Iranian language, or even a language isolate.
+
+I created this website because I noticed that resources on Linear A tend to fit into one of two categories: 1) Good information but unattractive presentation, and 2) Slick presentation but questionable information. Inevitably, websites that look more appealing attract more visitors, especially those who are new to the topic. I wanted this website to serve as a pleasantly-designed, interactive introduction to Linear A that also serves as a stepping stone to other sources.
+
+The sources include authoritative, scholarly sources such as [John Younger's website](https://people.ku.edu/~jyounger/LinearA/), as well as reliable popular sources. In order to represent the full range of work on the topic, I also link to some decipherment theories that are not as well accepted in the scholarly community, with their caveats clearly noted.
+
+## About the code
+
+This project is my first project built in TypeScript, and it has gone very well. I use enums and interfaces on the Alphabet and Resource pages to simplify management and handling of the data. The use of type annotations for functions has also helped me catch several bugs early, likely preventing hours' worth of debugging.
+
+I also used Bulma, which I find to be the nicest-looking and most modern-feeling CSS framework. Variables such as color definitions are kept in ``/src/bulmaconfig.css`` and some extra styles are in ``/src/app.css``.
+
+The list of characters is available at ``/src/utils/alphabet.tsx`` and the list of resources is available at ``/src/utils/resources.tsx``. New resources added to the resources file will automatically appear in the list on the site. New characters require a corresponding SVG to be placed in ``/public/alphabet``.
+
+To make hosting work with GitHub Pages, I had to replace the default build script with ``rm -r docs && react-scripts build && mv build docs``, which renames the ``build`` folder to ``docs`` once the build is finished. GitHub Pages unfortunately only supports either the root folder or ``/docs``, but if they support ``/build`` in the future I will revert to the default build script.
+
+### How to run
+
+The project is set up with yarn, so you can start the dev build with ``yarn start`` and compile a production build with ``yarn build``.
+
+If you prefer npm you can delete ``yarn.lock`` and ``node_modules`` and run ``npm install``.
+
+## License
+
+All original material on this site is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) with one exception (see below paragraph). I also make use of third-party images, which are licensed under the indicated licenses.
+
+All the SVG character files in ``/public/alphabet`` are in the public domain. They came from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Linear_A_signs), but I have made minor tweaks to some of them and I want to make sure my edited versions remain in the public domain.
+
+If you are the creator of something I used on this site and I messed up the licensing, let me know ASAP and I will fix the issue or remove your work to your preference.
