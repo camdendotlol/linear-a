@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
               What is Linear A?
             </p>
             <p className='subtitle'>
-              Dive into the ancient Mediterranean's most enigmatic writing system
+              Dive into the ancient Mediterranean&apos;s most enigmatic writing system
             </p>
           </div>
         </div>
@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
         <div className='hero-foot'>
           <div className='container has-text-centered'>
             <p className='is-size-7 hero-text image-credit'>
-              <span><a href="https://flickr.com/photos/41523983@N08/30547636456">'Minoan fresco depicting a bull leaping scene, found in Knossos, 1600-1400 BC, Heraklion Archaeological Museum, Crete' by Carole Raddato on Flickr</a>. <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC BY-SA 2.0</a></span>
+              <span><a href="https://flickr.com/photos/41523983@N08/30547636456">&apos;Minoan fresco depicting a bull leaping scene, found in Knossos, 1600-1400 BC, Heraklion Archaeological Museum, Crete&apos; by Carole Raddato on Flickr</a>. <a href='https://creativecommons.org/licenses/by-sa/2.0/'>CC BY-SA 2.0</a></span>
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
         <div className='hero-foot'>
           <div className='container has-text-centered'>
             <p className='is-size-7 hero-text image-credit'>
-              'Inscription [Ε 40]' by <a href='http://chaniamuseum.culture.gr/en/exhibit/585'>Archaeological Museum of Chania</a> under <a href='https://creativecommons.org/licenses/by-nc-nd/3.0/'>CC BY-NC-ND 3.0</a>
+            &apos;Inscription [Ε 40]&apos; by <a href='http://chaniamuseum.culture.gr/en/exhibit/585'>Archaeological Museum of Chania</a> under <a href='https://creativecommons.org/licenses/by-nc-nd/3.0/'>CC BY-NC-ND 3.0</a>
             </p>
           </div>
         </div>

@@ -7,9 +7,9 @@ import rightArrow from '../images/rightarrow.svg'
 
 interface Props {
   letter: Character,
-  setModalCharacter: Function,
+  setModalCharacter(character: Character): void,
   isActive: boolean,
-  setModalOpen: Function,
+  setModalOpen(boolean: boolean): void,
   alphabet: Array<Character>
 }
 
@@ -21,11 +21,10 @@ const rightIconStyle = {
   right: '8px'
 }
 
-const AlphabetModal = ({ letter, setModalCharacter, isActive, setModalOpen, alphabet }: Props) => {
+const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, setModalOpen, alphabet }: Props) => {
   const divToFocus = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (divToFocus && isActive) {
-      console.log('focus')
       divToFocus?.current?.focus()
     }
   }, [isActive])
@@ -88,7 +87,7 @@ const AlphabetModal = ({ letter, setModalCharacter, isActive, setModalOpen, alph
           </div>
           <div className='card-content'>
             <p className='title has-text-centered'>
-            {String.fromCodePoint(letter.unicode)} {letter.name}
+              {String.fromCodePoint(letter.unicode)} {letter.name}
             </p>
             <p className='subtitle has-text-centered is-size-6'>
               Unicode number: {letter.unicode}

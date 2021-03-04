@@ -1,7 +1,8 @@
 export interface Character {
   name: string,
   path: string,
-  unicode: number
+  unicode: number,
+  inLinearB: boolean
 }
 
 export enum ResourceType {
@@ -15,5 +16,6 @@ export interface Resource {
   title: string,
   url: string,
   type: ResourceType,
-  description: string
+  description: string,
+  tags: Array<string>
 }

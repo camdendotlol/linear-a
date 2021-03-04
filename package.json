@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "bulma": "^0.9.2",
@@ -23,7 +23,8 @@
     "start": "react-scripts start",
     "build": "rm -r docs && react-scripts build && mv build docs",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .tsx"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,15 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-no-loops": "^0.3.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "node-sass": "^5.0.0"
   }
 }

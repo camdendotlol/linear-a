@@ -41,6 +41,12 @@
   cursor: pointer;
 }
 
+.resource-tag {
+  background: lightgray;
+  border: lightgray;
+  margin-right: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   /* Have to turn off fixed backgrounds because iOS doesn't support them */
   .hero-bg {
