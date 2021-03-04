@@ -92,6 +92,24 @@ const Resources: React.FC = () => {
     }
   }
 
+  const displayClearFiltersButton = () => {
+    if (filterFormats.length === 0 && filterTags.length === 0) {
+      return null
+    } else {
+      return (
+        <button
+          className='button'
+          onClick = {() => {
+            setFilterFormats([])
+            setFilterTags([])
+          }}
+        >
+        Clear Filters
+        </button>
+      )
+    }
+  }
+
   const displayFilterBox = () => {
     if (showFilters) {
       return (
@@ -103,15 +121,7 @@ const Resources: React.FC = () => {
             >
               Hide Filters
             </button>
-            <button
-              className='button'
-              onClick = {() => {
-                setFilterFormats([])
-                setFilterTags([])
-              }}
-            >
-              Clear Filters
-            </button>
+            {displayClearFiltersButton()}
           </div>
           <h4>Format:</h4>
           {displayFormatSelector()}
@@ -129,15 +139,7 @@ const Resources: React.FC = () => {
             >
               Show Filters
             </button>
-            <button
-              className='button'
-              onClick = {() => {
-                setFilterFormats([])
-                setFilterTags([])
-              }}
-            >
-              Clear Filters
-            </button>
+            {displayClearFiltersButton()}
           </div>
         </div>
       )
