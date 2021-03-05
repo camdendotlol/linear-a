@@ -80,6 +80,30 @@ const resources: Array<Resource> = [
     type: ResourceType.Website,
     description: 'Services like Google Translate use machine learning to translating between modern languages. What if it could be used to decipher ancient scripts? This article describes an effort to put machine learning to the test with Ugaritic and Linear B, two already-deciphered scripts. The results are promising.',
     tags: ['Decipherment', 'Linear B', 'Technology']
+  },
+  {
+    author: 'Mark Cartwright',
+    title: 'Minoan Civilization',
+    url: 'https://www.ancient.eu/Minoan_Civilization/',
+    type: ResourceType.Website,
+    description: 'A broad but thorough look at the Minoans and their place in the cosmopolitan world of the Bronze Age. Cartwright also takes a look at their fall in the late second millenium BC.',
+    tags: ['Minoans', 'History']
+  },
+  {
+    author: 'James Wright',
+    title: 'The Evolution of Writing',
+    url: 'https://sites.utexas.edu/dsb/tokens/the-evolution-of-writing/',
+    type: ResourceType.Website,
+    description: 'A concise, general article on the development of writing. Wright describes the three independent instances of writing\'s invention: the Near East, China, and Mesoamerica. He also covers the trends in written language leading up to the alphabet.',
+    tags: ['History']
+  },
+  {
+    author: 'Eric Cline',
+    title: '1177 B.C.: When Civilization Collapsed',
+    url: 'https://www.youtube.com/watch?v=M4LRHJlijVU',
+    type: ResourceType.Video,
+    description: 'The Minoan civilization disappears from the historical record during a period known as the Bronze Age Collapse. Eric Cline is a historian and archaeologist who specializes in the era, and here he presents his theories for why this international collapse happened.',
+    tags: ['History', 'Minoans']
   }
 ]
 
