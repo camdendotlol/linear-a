@@ -72,6 +72,14 @@ const resources: Array<Resource> = [
     type: ResourceType.Website,
     description: 'Reddit user UndercoverClassicist answers a question about the latest updates in the decipherment of Linear A. They go into great detail on how other scripts have been deciphered, and the reasons for why Linear A will likely not be deciphered anytime soon.',
     tags: ['Decipherment']
+  },
+  {
+    author: 'MIT Technology Review',
+    title: 'Machine learning has been used to automatically translate long-lost languages',
+    url: 'https://www.technologyreview.com/2019/07/01/65601/machine-learning-has-been-used-to-automatically-translate-long-lost-languages/',
+    type: ResourceType.Website,
+    description: 'Services like Google Translate use machine learning to translating between modern languages. What if it could be used to decipher ancient scripts? This article describes an effort to put machine learning to the test with Ugaritic and Linear B, two already-deciphered scripts. The results are promising.',
+    tags: ['Decipherment', 'Linear B', 'Technology']
   }
 ]
 
