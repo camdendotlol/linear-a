@@ -40,5 +40,10 @@
         ],
         "no-console": 1,
         "no-loops/no-loops": 2
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
