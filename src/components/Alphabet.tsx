@@ -25,12 +25,11 @@ const Alphabet: React.FC = () => {
     setModalOpen(true)
   }
 
+  // give blue background to characters that also appear in Linear B
   const chooseLetterBackground = (inLinearB: boolean): string => {
-    if (inLinearB) {
-      return ' has-background-secondary'
-    } else {
-      return ''
-    }
+    return inLinearB
+      ? ' has-background-secondary'
+      : ''
   }
 
   const letterBox = (letter: Character) => {

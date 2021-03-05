@@ -5,6 +5,8 @@ import icon from '../images/icon.png'
 const Navbar: React.FC = () => {
   const [menuVisible, setMenuVisible] = useState(false)
 
+  // Check if the navbar burger menu is open
+  // (Only applies to mobile)
   const checkIfActive = (base: string) => {
     return menuVisible
       ? `${base} is-active`

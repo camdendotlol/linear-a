@@ -15,20 +15,18 @@ const App: React.FC = () => {
     window.scrollTo(0, 0)
   }, [pathname])
 
+  // Give it a black background on the homepage to fit in with the other elements
   const setFooterBackgroundColor = (): string => {
-    if (pathname === '/') {
-      return ' has-background-black'
-    } else {
-      return ''
-    }
+    return pathname === '/'
+      ? ' has-background-black'
+      : ''
   }
 
+  // Set text to white if the background is black
   const setFooterTextColor = (): string => {
-    if (pathname === '/') {
-      return 'has-text-white'
-    } else {
-      return 'has-text-black'
-    }
+    return pathname === '/'
+      ? 'has-text-white'
+      : 'has-text-black'
   }
 
   return (

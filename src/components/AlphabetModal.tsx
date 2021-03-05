@@ -22,31 +22,14 @@ const rightIconStyle = {
 }
 
 const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, setModalOpen, alphabet }: Props) => {
+
+  // Focus the modal so the keyboard listener works
   const divToFocus = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (divToFocus && isActive) {
       divToFocus?.current?.focus()
     }
   }, [isActive])
-
-  const characterIndex = alphabet.findIndex(char => char.name === letter.name)
-
-  const getNewIndexIncrement = (index: number): number => {
-    if (index === alphabet.length - 1) {
-      return 0
-    } else {
-      return index + 1
-    }    
-  }
-
-  const getNewIndexDecrement = (index: number): number => {
-    if (index === 0) {
-      return alphabet.length - 1
-    } else {
-      return index - 1
-    }
-  }
-
   const watchKeyPress = (e: React.KeyboardEvent<HTMLDivElement>): void => {
     if (e.key === 'ArrowRight') {
       setModalCharacter(alphabet[getNewIndexIncrement(characterIndex)])
@@ -54,6 +37,24 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
       setModalCharacter(alphabet[getNewIndexDecrement(characterIndex)])
     } else if (e.key === 'Escape') {
       setModalOpen(false)
+    }
+  }
+
+  // Find the index for the current character, so we can cycle to the next or previous one
+  // when arrow keys or buttons are used.
+  const characterIndex = alphabet.findIndex(char => char.name === letter.name)
+  const getNewIndexIncrement = (index: number): number => {
+    if (index === alphabet.length - 1) {
+      return 0
+    } else {
+      return index + 1
+    }    
+  }
+  const getNewIndexDecrement = (index: number): number => {
+    if (index === 0) {
+      return alphabet.length - 1
+    } else {
+      return index - 1
     }
   }
 

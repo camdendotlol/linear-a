@@ -1,5 +1,11 @@
 import { Character } from './types'
 
+// Guide to the properties here:
+// Name: the identifier used by linguists/historians for the character
+// Path: points the the SVG in the /public folder
+// Unicode: the Unicode identifier for the character
+// inLinearB: whether the character appears in Linear B
+
 const alphabet: Array<Character> = [
   {
     name: 'A001',
