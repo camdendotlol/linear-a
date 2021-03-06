@@ -25,14 +25,15 @@ const History: React.FC = () => {
         </div>
         <div className='box'>
           <div className='content has-text-black is-size-5'>
-            <p>Scripts of this time could be <strong>pictographic</strong>, <strong>logographic</strong>, or <strong>syllabic</strong>. The concept of an alphabet as we know it today would not be invented until around 1000 BC. <strong>Pictographic</strong> scripts are a collection of images that represent the thing in the image. For example, a pictogram of a king would represent a king. Logographic systems expand on pictograms by using a symbol to represent a word. Logograms would often be combined to communicate more complex ideas. Finally, syllabic systems use symbols to represent syllables, which can be combined to form words. Most of Linear A seems to be syllabic, but it likely includes seom pictograms and logograms too.</p>
+            <p>Scripts of this time could be <strong>pictographic</strong>, <strong>logographic</strong>, or <strong>syllabic</strong>. The concept of an alphabet as we know it today would not be invented until around 1000 BC. <strong>Pictographic</strong> scripts are a collection of images that represent the thing in the image. For example, a pictogram of a king would represent a king. <strong>Logographic</strong> systems expand on pictograms by using a symbol to represent a spoken word. Logograms would often be combined to communicate more complex ideas, adding another layer of expressiveness to scripts. Finally, <strong>syllabic</strong> systems use symbols to represent syllables, which can be combined to form words.</p>
+            <p>Most of Linear A seems to be syllabic, but it likely includes some pictograms and logograms too.</p>
           </div>
         </div>
         <div className='box'>
           <div className='content has-text-black is-size-5'>
             <h4 className='has-text-centered'>The Rebus Principle</h4>
-            <p>It&apos;s important to keep in mind that even as writing systems gradually developed from simple symbols into complex systems, spoken language remained as complex as it is today. Communicating complex ideas in pictures can be challenging, which put a lot of pressure on scripts to became more granular over time.</p>
-            <p>So how did the users of early writing systems represent new ideas, or objects that they lacked a symbol for?</p>
+            <p>It&apos;s important to keep in mind that even as writing systems gradually developed from simple symbols into complex systems, spoken language has always been as complex as it is today. Communicating complex ideas in pictures can be challenging, which put a lot of pressure on scripts to became more granular over time.</p>
+            <p>So how did the users of early writing systems represent new ideas or objects that they lacked a symbol for?</p>
             <p>The &quot;Rebus Principle&quot; is a lingusitic concept that describes the way ancient scribes would combine logograms to communicate new concepts based on their <i>pronunciation</i> instead of the pictures themselves. Let&apos;s try it out below.</p>
           </div>
         </div>
