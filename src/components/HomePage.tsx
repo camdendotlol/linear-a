@@ -79,15 +79,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className='hero is-medium is-black'>
-        <div className='hero-body'>
-          <div className='container has-text-centered'>
-            <p className='is-size-4 is-size-6-mobile'>
-              Modern scholarship on Linear A attempts to identify whether the symbols are phonetic, syllabic, logographic, or a combination. Researchers have also tried to determine the language that Linear A represents.
-            </p>
-          </div>
-        </div>
-      </section>
       <section className='hero is-black is-halfheight'>
         <div className='hero-body'>
           <div className='container has-text-centered'>
