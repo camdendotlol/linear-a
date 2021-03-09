@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import AlphabetModal from './AlphabetModal'
-import alphabet from '../utils/alphabet'
+import CharacterModal from './CharacterModal'
+import characters from '../utils/characters'
 import { Character } from '../utils/types'
 
-const Alphabet: React.FC = () => {
+const Characters: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false)
-  const [modalCharacter, setModalCharacter] = useState<Character>(alphabet[0])
+  const [modalCharacter, setModalCharacter] = useState<Character>(characters[0])
 
   const boxStyle = {
     width: '164px',
@@ -37,7 +37,7 @@ const Alphabet: React.FC = () => {
       <div className='column' key={letter.name}>
         <div
           onClick={() => openModal(letter)}
-          className={'box alphabet-box has-text-black' + chooseLetterBackground(letter.inLinearB) }
+          className={'box character-box has-text-black' + chooseLetterBackground(letter.inLinearB) }
           style={boxStyle}
         >
           <figure className='image is-128x128'>
@@ -51,16 +51,16 @@ const Alphabet: React.FC = () => {
 
   return (
     <div>
-      <AlphabetModal
+      <CharacterModal
         letter={modalCharacter}
         setModalCharacter={setModalCharacter}
         isActive={modalOpen}
         setModalOpen={setModalOpen}
-        alphabet={alphabet}
+        characters={characters}
       />
       <div className='hero mb-4'>
         <div className='hero-body has-text-centered'>
-          <h1 className='title'>Alphabet</h1>
+          <h1 className='title'>Characters</h1>
         </div>
       </div>
       <div className='container'>
@@ -74,15 +74,11 @@ const Alphabet: React.FC = () => {
         </div>
         
         <div className='columns is-multiline is-mobile is-variable is-0-mobile'>
-          {alphabet.map(character => letterBox(character))}
-        </div>
-        <div className='content has-text-centered pb-4 pt-4'>
-          <p>This page uses public domain vector graphics from <a href='https://commons.wikimedia.org/wiki/Category:Linear_A_signs'>Wikimedia Commons.</a></p>
-          <p>The images for A058 and A078 have been lightly modified, and are hereby released into the public domain.</p>
+          {characters.map(character => letterBox(character))}
         </div>
       </div>
     </div>
   )
 }
 
-export default Alphabet
+export default Characters

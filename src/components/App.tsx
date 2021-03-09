@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import { Switch, Route, useLocation, Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import HomePage from './HomePage'
-import Alphabet from './Alphabet'
-import Texts from './Texts'
+import Characters from './Characters'
 import History from './History'
 import Resources from './Resources'
 import Legal from './Legal'
@@ -33,14 +32,11 @@ const App: React.FC = () => {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route path='/alphabet'>
-          <Alphabet />
-        </Route>
-        <Route path='/texts'>
-          <Texts />
-        </Route>
         <Route path='/history'>
           <History />
+        </Route>
+        <Route path='/characters'>
+          <Characters />
         </Route>
         <Route path='/resources'>
           <Resources />

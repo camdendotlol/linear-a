@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import heroImage from '../images/knossos.jpg'
-import alphabetImage from '../images/alphabet_darkened.jpg'
 import textImage from '../images/text-smaller.jpg'
 import frescoImage from '../images/fresco.jpg'
 
@@ -58,8 +57,8 @@ const HomePage: React.FC = () => {
       <section className='hero is-black is-halfheight hero-bg' style={{ backgroundImage: `url(${textImage})`}}>
         <div className='hero-body'>
           <div className='container has-text-centered hero-text p-4'>
-            <Link to='/texts' className='title is-size-1 is-size-2-mobile'>
-              Explore the texts &#10132;
+            <Link to='/characters' className='title is-size-1 is-size-2-mobile'>
+              Explore the characters &#10132;
             </Link>
           </div>
         </div>
@@ -77,15 +76,6 @@ const HomePage: React.FC = () => {
             <p className='is-size-4 is-size-6-mobile'>
               After several hundred years, the Minoans developed a new writing system - Linear B. Linear B was deciphered in the 1950s. Although Linear A shares many of the same characters, this did not lead to its decipherment.
             </p>
-          </div>
-        </div>
-      </section>
-      <section className='hero is-black is-halfheight hero-bg' style={{ backgroundImage: `url(${alphabetImage})` }}>
-        <div className='hero-body'>
-          <div className='container has-text-centered hero-text p-4'>
-            <Link to='/alphabet' className='title is-size-1 is-size-2-mobile'>
-              See the alphabet &#10132;
-            </Link>
           </div>
         </div>
       </section>

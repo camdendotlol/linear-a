@@ -9,7 +9,7 @@ interface Props {
   setModalCharacter(character: Character): void,
   isActive: boolean,
   setModalOpen(boolean: boolean): void,
-  alphabet: Array<Character>
+  characters: Array<Character>
 }
 
 const leftIconStyle = {
@@ -20,7 +20,7 @@ const rightIconStyle = {
   right: '8px'
 }
 
-const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, setModalOpen, alphabet }: Props) => {
+const CharacterModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, setModalOpen, characters }: Props) => {
 
   // Focus the modal so the keyboard listener works
   const divToFocus = useRef<HTMLDivElement>(null)
@@ -31,9 +31,9 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
   }, [isActive])
   const watchKeyPress = (e: React.KeyboardEvent<HTMLDivElement>): void => {
     if (e.key === 'ArrowRight') {
-      setModalCharacter(alphabet[getNewIndexIncrement(characterIndex)])
+      setModalCharacter(characters[getNewIndexIncrement(characterIndex)])
     } else if (e.key === 'ArrowLeft') {
-      setModalCharacter(alphabet[getNewIndexDecrement(characterIndex)])
+      setModalCharacter(characters[getNewIndexDecrement(characterIndex)])
     } else if (e.key === 'Escape') {
       setModalOpen(false)
     }
@@ -41,9 +41,9 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
 
   // Find the index for the current character, so we can cycle to the next or previous one
   // when arrow keys or buttons are used.
-  const characterIndex = alphabet.findIndex(char => char.name === letter.name)
+  const characterIndex = characters.findIndex(char => char.name === letter.name)
   const getNewIndexIncrement = (index: number): number => {
-    if (index === alphabet.length - 1) {
+    if (index === characters.length - 1) {
       return 0
     } else {
       return index + 1
@@ -51,7 +51,7 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
   }
   const getNewIndexDecrement = (index: number): number => {
     if (index === 0) {
-      return alphabet.length - 1
+      return characters.length - 1
     } else {
       return index - 1
     }
@@ -64,14 +64,14 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
         <button
           className='nav-button'
           style={ leftIconStyle }
-          onClick={() => setModalCharacter(alphabet[getNewIndexDecrement(characterIndex)])}
+          onClick={() => setModalCharacter(characters[getNewIndexDecrement(characterIndex)])}
         >
           <img src={bootstrapIconPaths.arrowLeftCircle} alt='Previous character'/>
         </button>
         <button
           className='nav-button'
           style={ rightIconStyle }
-          onClick={() => setModalCharacter(alphabet[getNewIndexIncrement(characterIndex)])}
+          onClick={() => setModalCharacter(characters[getNewIndexIncrement(characterIndex)])}
         >
           <img src={bootstrapIconPaths.arrowRightCircle} alt='Next character' />
         </button>
@@ -104,4 +104,4 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
   )
 }
 
-export default AlphabetModal
+export default CharacterModal

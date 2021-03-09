@@ -28,11 +28,8 @@ const Navbar: React.FC = () => {
         </div>
         <div className={checkIfActive('navbar-menu')}>
           <div className='navbar-end'>
-            <Link className='navbar-item' to='/alphabet' onClick={() => setMenuVisible(false)}>
-              Alphabet
-            </Link>
-            <Link className='navbar-item' to='/texts' onClick={() => setMenuVisible(false)}>
-              Texts
+            <Link className='navbar-item' to='/characters' onClick={() => setMenuVisible(false)}>
+              Characters
             </Link>
             <Link className='navbar-item' to='/history' onClick={() => setMenuVisible(false)}>
               History

@@ -10,11 +10,11 @@ The sources include authoritative, scholarly sources such as [John Younger's web
 
 ## About the code
 
-This project is my first project built in TypeScript, and it has gone very well. I use enums and interfaces on the Alphabet and Resource pages to simplify management and handling of the data. The use of type annotations for functions has also helped me catch several bugs early, likely preventing hours' worth of debugging.
+This project is my first project built in TypeScript, and it has gone very well. I use enums and interfaces on the Characters and Resource pages to simplify management and handling of the data. The use of type annotations for functions has also helped me catch several bugs early, likely preventing hours' worth of debugging.
 
 I also used Bulma, which I find to be the nicest-looking and most modern-feeling CSS framework. Variables such as color definitions are kept in ``/src/bulmaconfig.css`` and some extra styles are in ``/src/app.css``.
 
-The list of characters is available at ``/src/utils/alphabet.tsx`` and the list of resources is available at ``/src/utils/resources.tsx``. New resources added to the resources file will automatically appear in the list on the site. New characters require a corresponding SVG to be placed in ``/public/alphabet``.
+The list of characters is available at ``/src/utils/characters.tsx`` and the list of resources is available at ``/src/utils/resources.tsx``. New resources added to the resources file will automatically appear in the list on the site. New characters require a corresponding SVG to be placed in ``/public/characters``.
 
 To make hosting work with GitHub Pages, I had to replace the default build script with ``rm -r docs && react-scripts build && mv build docs``, which renames the ``build`` folder to ``docs`` once the build is finished. GitHub Pages unfortunately only supports either the root folder or ``/docs``, but if they support ``/build`` in the future I will revert to the default build script.
 
@@ -26,8 +26,12 @@ If you prefer npm you can delete ``yarn.lock`` and ``node_modules`` and run ``np
 
 ## License
 
-All original material on this site is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) with one exception (see below paragraph). I also make use of third-party images, which are licensed under the indicated licenses.
+All original text on this site is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). I also make use of third-party images, which are licensed under the indicated licenses.
 
-All the SVG character files in ``/public/alphabet`` are in the public domain. They came from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Linear_A_signs), but I have made minor tweaks to some of them and I want to make sure my edited versions remain in the public domain.
+Source code is [available on GitHub](https://github.com/mythmakerseven/linear-a) and is licensed under the [MIT License](https://mit-license.org/).
 
-If you are the creator of something I used on this site and I messed up the licensing, let me know ASAP and I will fix the issue or remove your work to your preference.
+This website uses [Bootstrap Icons](https://icons.getbootstrap.com/) under the [MIT License](https://github.com/twbs/icons/blob/main/LICENSE.md).
+
+All the Linear A character SVG images in ``/public/characters`` are in the public domain. They came from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Linear_A_signs), but I have made minor tweaks to some of them and I want to make sure my edited versions remain in the public domain.
+
+Use of third-party materials does not imply the creator's endorsement of this website. If you have objections to your work appearing on this website, email me at [my first initial] at [my full name] dot com and I address your concerns or remove your work to your preference.

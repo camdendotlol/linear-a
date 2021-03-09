@@ -10,11 +10,11 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.alphabet-box {
+.character-box {
   transition: 0.2s;
 }
 
-.alphabet-box:hover {
+.character-box:hover {
   cursor: pointer;
   filter: brightness(0.935);
 }
