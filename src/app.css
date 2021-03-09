@@ -48,9 +48,15 @@
 }
 
 .resource-tag {
-  background: lightgray;
-  border: lightgray;
+  background: #ededed;
+  border: #ededed;
   margin-right: 10px;
+  transition: 0.2s;
+}
+
+.resource-box:hover .resource-tag {
+  background: #d3d3d3;
+  border: #d3d3d3;
 }
 
 @media only screen and (max-width: 768px) {
