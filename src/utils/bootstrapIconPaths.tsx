@@ -1,4 +1,4 @@
-const bootstrapIconPaths: Record<string, string> = {
+const bootstrapIcons: Record<string, string> = {
   alarmFill: `${process.env.PUBLIC_URL}/bootstrap-icons/alarm-fill.svg`,
   alarm: `${process.env.PUBLIC_URL}/bootstrap-icons/alarm.svg`,
   alignBottom: `${process.env.PUBLIC_URL}/bootstrap-icons/align-bottom.svg`,
@@ -1327,4 +1327,4 @@ const bootstrapIconPaths: Record<string, string> = {
   zoomOut: `${process.env.PUBLIC_URL}/bootstrap-icons/zoom-out.svg`,
 }
 
-export default bootstrapIconPaths
+export default bootstrapIcons

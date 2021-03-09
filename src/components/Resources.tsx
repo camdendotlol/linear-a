@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Resource, ResourceType } from '../utils/types'
 import resources from '../utils/resources'
-import bootstrapIconPaths from '../utils/bootstrapIconPaths'
+import bootstrapIcons from '../utils/bootstrapIconPaths'
 
 const Resources: React.FC = () => {
   const [filterTags, setFilterTags] = useState<Array<string>>([])
@@ -161,11 +161,11 @@ const Resources: React.FC = () => {
     const displayIcon = (type: ResourceType): React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> | null => {
       switch (type) {
       case (ResourceType.Website):
-        return <img src={bootstrapIconPaths.laptop} alt='' />
+        return <img src={bootstrapIcons.laptop} alt='' />
       case (ResourceType.Book):
-        return <img src={bootstrapIconPaths.book} alt='' />
+        return <img src={bootstrapIcons.book} alt='' />
       case (ResourceType.Video):
-        return <img src={bootstrapIconPaths.film} alt='' />
+        return <img src={bootstrapIcons.film} alt='' />
       default:
         return null
       }
