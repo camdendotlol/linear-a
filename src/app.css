@@ -20,16 +20,22 @@
 }
 
 .nav-button {
-  height: 24px;
-  width: 24px;
-  border: 2px solid gray;
-  border-radius: 50%;
+  border: none;
   padding: 0;
   outline: none;
   position: absolute;
   z-index: 99999;
   top: 50%;
   background: none
+}
+
+.nav-button:hover {
+  cursor: pointer;
+}
+
+.nav-button img {
+  height: 32px;
+  width: 32px;
 }
 
 .resource-box {

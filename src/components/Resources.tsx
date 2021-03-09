@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { Resource, ResourceType } from '../utils/types'
 import resources from '../utils/resources'
-import bookIcon from '../images/book.svg'
-import websiteIcon from '../images/laptop.svg'
-import videoIcon from '../images/film.svg'
+import bootstrapIconPaths from '../utils/bootstrapIconPaths'
 
 const Resources: React.FC = () => {
   const [filterTags, setFilterTags] = useState<Array<string>>([])
@@ -163,11 +161,11 @@ const Resources: React.FC = () => {
     const displayIcon = (type: ResourceType): React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> | null => {
       switch (type) {
       case (ResourceType.Website):
-        return <img src={websiteIcon} alt='' />
+        return <img src={bootstrapIconPaths.laptop} alt='' />
       case (ResourceType.Book):
-        return <img src={bookIcon} alt='' />
+        return <img src={bootstrapIconPaths.book} alt='' />
       case (ResourceType.Video):
-        return <img src={videoIcon} alt='' />
+        return <img src={bootstrapIconPaths.film} alt='' />
       default:
         return null
       }

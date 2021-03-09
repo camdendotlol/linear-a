@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 import { Character } from '../utils/types'
 
-import leftArrow from '../images/leftarrow.svg'
-import rightArrow from '../images/rightarrow.svg'
+import bootstrapIconPaths from '../utils/bootstrapIconPaths'
 
 interface Props {
   letter: Character,
@@ -67,14 +66,14 @@ const AlphabetModal: React.FC<Props> = ({ letter, setModalCharacter, isActive, s
           style={ leftIconStyle }
           onClick={() => setModalCharacter(alphabet[getNewIndexDecrement(characterIndex)])}
         >
-          <img src={leftArrow} alt='Previous character'/>
+          <img src={bootstrapIconPaths.arrowLeftCircle} alt='Previous character'/>
         </button>
         <button
           className='nav-button'
           style={ rightIconStyle }
           onClick={() => setModalCharacter(alphabet[getNewIndexIncrement(characterIndex)])}
         >
-          <img src={rightArrow} alt='Next character' />
+          <img src={bootstrapIconPaths.arrowRightCircle} alt='Next character' />
         </button>
         <div className='card'>
           <div className='card-image' style={{ width: '240px', height: '320px', marginLeft: 'auto', marginRight: 'auto' }}>
