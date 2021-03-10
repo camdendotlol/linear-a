@@ -7,7 +7,7 @@ const resources: Array<Resource> = [
     url: 'https://people.ku.edu/~jyounger/LinearA/',
     type: ResourceType.Website,
     description: 'John Younger is Professor Emeritus of Classics at the University of Kansas, and his old-school website is the richest source of information about Linear A on the internet today.',
-    tags: ['General', 'Texts', 'Theories']
+    tags: ['Texts', 'Theories']
   },
   {
     author: 'George Douros',

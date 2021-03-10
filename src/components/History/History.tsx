@@ -38,10 +38,9 @@ const History: React.FC = () => {
             <p>The &quot;Rebus Principle&quot; is a lingusitic concept that describes the way ancient scribes would combine logograms to communicate new concepts based on their <i>pronunciation</i> instead of the pictures themselves. Let&apos;s try it out below.</p>
           </div>
         </div>
-        <div className='box'>
+        <div className='box has-background-primary'>
           <RebusGame />
         </div>
-        {/* put Rebus Principle game here? */}
       </div>
     </div>
   )

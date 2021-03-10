@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import CharacterModal from './CharacterModal'
-import characters from '../utils/characters'
-import { Character } from '../utils/types'
+import characters from '../../utils/characters'
+import { Character } from '../../utils/types'
 
 const Characters: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false)

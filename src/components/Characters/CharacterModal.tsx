@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 
-import { Character } from '../utils/types'
+import { Character } from '../../utils/types'
 
-import bootstrapIcons from '../utils/bootstrapIconPaths'
+import bootstrapIcons from '../../utils/bootstrapIconPaths'
 
 interface Props {
   letter: Character,
