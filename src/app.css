@@ -42,7 +42,7 @@
   transition: 0.2s;
 }
 
-.resource-box:hover {
+.resource-box:hover, .resource-box:focus {
   background: #ededed;
   cursor: pointer;
 }
@@ -54,7 +54,7 @@
   transition: 0.2s;
 }
 
-.resource-box:hover .resource-tag {
+.resource-box:hover .resource-tag, .resource-box:focus .resource-tag {
   background: #d3d3d3;
   border: #d3d3d3;
 }

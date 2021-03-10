@@ -3,7 +3,7 @@
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Rosarivo&display=swap');
-@import "../node_modules/bulma/sass/utilities/functions.sass";
+@import "~bulma/sass/utilities/functions.sass";
 
 // Set your brand colors
 $purple: #8A4D76;
@@ -40,4 +40,4 @@ $input-border-color: transparent;
 $input-shadow: none;
 
 // Import only what you need from Bulma
-@import "../node_modules/bulma/bulma.sass";
+@import "~bulma/bulma.sass";

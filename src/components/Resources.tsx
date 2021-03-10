@@ -172,30 +172,28 @@ const Resources: React.FC = () => {
     }
 
     return (
-      <div className='box resource-box' key={item.url}>
-        <a href={item.url}>
-          <div className='media has-text-black'>
-            <figure className='media-left'>
-              <p className='image is-64x64'>
-                {displayIcon(item.type)}
+      <a className='box resource-box' key={item.url} href={item.url}>
+        <div className='media has-text-black'>
+          <figure className='media-left'>
+            <p className='image is-64x64'>
+              {displayIcon(item.type)}
+            </p>
+          </figure>
+          <div className='media-content'>
+            <div className='content'>
+              <p>
+                <strong className='has-text-primary'>{item.title}</strong> by <span className='has-text-secondary'>{item.author}</span>
+                <br />
+                {item.description}
+                <br />
+                <span className='has-text-grey is-hidden-mobile'>{item.url}</span>
+                <br className='is-hidden-mobile' />
+                Tags: {item.tags.map(t => <span className='resource-tag' key={t}>{t}</span>)}
               </p>
-            </figure>
-            <div className='media-content'>
-              <div className='content'>
-                <p>
-                  <strong className='has-text-primary'>{item.title}</strong> by <span className='has-text-secondary'>{item.author}</span>
-                  <br />
-                  {item.description}
-                  <br />
-                  <span className='has-text-grey is-hidden-mobile'>{item.url}</span>
-                  <br className='is-hidden-mobile' />
-                  Tags: {item.tags.map(t => <span className='resource-tag' key={t}>{t}</span>)}
-                </p>
-              </div>
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     )
   }
 
@@ -222,7 +220,7 @@ const Resources: React.FC = () => {
         </div>
       </div>
       <div className='container' style={{ maxWidth: '1000px' }}>
-        {displayFilterBox()}        
+        {displayFilterBox()}
         {handleFilterResults(sortedResources)}
       </div>
     </div>
