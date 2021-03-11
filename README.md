@@ -14,6 +14,8 @@ This project is my first project built in TypeScript, and it has gone very well.
 
 I also used Bulma, which I find to be the nicest-looking and most modern-feeling CSS framework. Variables such as color definitions are kept in ``/src/bulmaconfig.css`` and some extra styles are in ``/src/app.css``.
 
+Although there is a lot of static text on this site, I chose not to use a site generator like Hugo or Jekyll. I don't expect the site to grow large enough to justify the added complexity. The current setup allows easy integration of React components such as activities, minigames, and other dynamic content, which seems at a glance to be a lot more complicated to use with a static site generator. If the site expands to a point where plain React becomes a major disadvantage, I will look into Next.js.
+
 The list of characters is available at ``/src/utils/characters.tsx`` and the list of resources is available at ``/src/utils/resources.tsx``. New resources added to the resources file will automatically appear in the list on the site. New characters require a corresponding SVG to be placed in ``/public/characters``.
 
 To make hosting work with GitHub Pages, I had to replace the default build script with ``rm -r docs && react-scripts build && mv build docs``, which renames the ``build`` folder to ``docs`` once the build is finished. GitHub Pages unfortunately only supports either the root folder or ``/docs``, but if they support ``/build`` in the future I will revert to the default build script.
