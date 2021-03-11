@@ -41,6 +41,12 @@ const History: React.FC = () => {
         <div className='box has-background-primary'>
           <RebusGame />
         </div>
+        <div className='box'>
+          <div className='content has-text-black is-size-5'>
+            <p>Maybe if that was your writing system, you would be motivated to develop an alphabet instead! However, some societies that used logographic writing systems adapted very well to modern literacy. The Chinese language, for example, is considered logosyllabic, meaning it combines elements of both logographic and syllabic scripts, and often makes use of the Rebus Principle to form new words. Chinese can also be represented alphabetically through systems such as <a href='https://en.wikipedia.org/wiki/Pinyin'>pinyin</a>, though in practice this is only used in situations when standard Chinese characters are unsupported.</p>
+            <p>You can probably imagine how much harder it is to decipher a script like Linear A than a strictly alphabetic script. Though symbols might be clear pictures of the word they represent, they might also be combined to mean something entirely unconnected from how they first appear, like you may have created in the activity above.</p>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -8,7 +8,7 @@ import bootstrapIcons from '../../utils/bootstrapIconPaths'
 //
 // Current ideas:
 // horizon - her eye sun
-// yellow - yell circle
+// yellow - megaphone circle
 // excellent - egg sell int (as in integer) (maybe too hard?)
 // thinkpiece - think (dialog bubble?) puzzle piece
 // piecemeal - peace sign fried egg
@@ -20,18 +20,26 @@ import bootstrapIcons from '../../utils/bootstrapIconPaths'
 const RebusGame:React.FC = () => {
   const wordTable: {[key: string]: Array<string>} = {
     yellow: [bootstrapIcons.megaphone, bootstrapIcons.circle],
-    hotrod: [bootstrapIcons.thermometerSun, bootstrapIcons.arrowUp]
+    hotrod: [bootstrapIcons.thermometerSun, bootstrapIcons.arrowUp],
+    excellent: [bootstrapIcons.egg, bootstrapIcons.cashStack, bootstrapIcons.sortNumericUp],
+    thinkpiece: [bootstrapIcons.chatDots, bootstrapIcons.puzzle],
+    piecemeal: [bootstrapIcons.puzzle, bootstrapIcons.eggFried]
   }
 
-  const [unusedWords, setUnusedWords] = useState<Array<string>>(Object.keys(wordTable))
   const [currentWord, setCurrentWord] = useState<string | null>(null)
   const [iconChoices, setIconChoices] = useState<Array<string> | null>(null)
   const [selectedIcons, setSelectedIcons] = useState<Array<string>>([])
 
+  // Select a random word from the list
+  // Repeats are allowed, but not back-to-back
   const pickNewWord = (wordList: Array<string>) => {
     const newWord = wordList[Math.floor(Math.random() * wordList.length)]
-    setUnusedWords(wordList.filter(w => w !== newWord))
-    return newWord
+    if (newWord === currentWord) {
+      pickNewWord(wordList)
+    } else {
+      setCurrentWord(newWord)
+      setSelectedIcons([])
+    }
   }
 
   // Get an array of the keys so we can use Math.random() to pick icons
@@ -51,6 +59,7 @@ const RebusGame:React.FC = () => {
   const getChoices = (word: string | null) => {
     if (!word) return null
     let choiceList = wordTable[word]
+
     const fillList = (list: Array<string>): Array<string> => {
       if (choiceList.length < 9) {
         choiceList = choiceList.concat(getRandomIcon(list))
@@ -58,21 +67,25 @@ const RebusGame:React.FC = () => {
           return fillList(choiceList)
         }
       }
-      return list
+      // Shuffle the list
+      const sortedList = list.sort(() => Math.random() - 0.5)
+      return sortedList
     }
-    return fillList(choiceList)
+
+    // I noticed that the shuffled list wasn't shuffled very well,
+    // so let's shuffle again here.
+    return fillList(choiceList).sort(() => Math.random() - 0.5)
   }
 
+  // get the initial word, only runs on first render
   useEffect((): void => {
-    let newWord = null
-    if (unusedWords.length > 0) {
-      if (!currentWord) {
-        newWord = pickNewWord(unusedWords)
-        setCurrentWord(newWord)
-      }
-      setIconChoices(getChoices(newWord))
-    }
+    pickNewWord(Object.keys(wordTable))
   }, [])
+
+  // get icons for the current word
+  useEffect((): void => {
+    setIconChoices(getChoices(currentWord))
+  }, [currentWord])
 
   const toggleIconSelection = (icon: string): void => {
     if (selectedIcons.includes(icon)) {
@@ -137,6 +150,14 @@ const RebusGame:React.FC = () => {
           <div className='is-0-mobile is-flex is-justify-content-center'>
             { selectedIcons?.map(i => inputIconBox(i)) }
           </div>
+        </div>
+        <div className='has-text-centered'>
+          <button
+            className='button'
+            onClick={() => pickNewWord(Object.keys(wordTable))}
+          >
+            Next word
+          </button>
         </div>
       </div>
     </div>

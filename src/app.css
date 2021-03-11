@@ -12,11 +12,21 @@
 
 .character-box {
   transition: 0.2s;
+  width: 164px;
+  height: 164px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px
 }
 
 .character-box:hover {
   cursor: pointer;
   filter: brightness(0.935);
+}
+
+.letter-img {
+  position: relative;
+  margin-top: -15px;
 }
 
 .nav-button {
@@ -63,8 +73,9 @@
   transition: 0.1s;
   width: 64px;
   height: 64px;
-  margin: 0 10px 10px;
+  /* margin: 0 10px 10px; */
   padding: 12px;
+  margin: 0 auto;
 }
 
 .rebus-icon:hover {
