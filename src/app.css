@@ -90,6 +90,22 @@
   align-self: center;
 }
 
+/* Avoid using the Bulma Flexbox helpers */
+/* They are super complicated with no benefit */
+.historian-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bulma tablet breakpoint */
+@media only screen and (max-width: 1024px) {
+  .historian-img img {
+    max-height: 500px;
+  }
+}
+
+/* Bulma phone breakpoint */
 @media only screen and (max-width: 768px) {
   /* Have to turn off fixed backgrounds because iOS doesn't support them */
   .hero-bg {
@@ -103,5 +119,13 @@
   .rebus-icon {
     width: 64px;
     height: 64px;
+  }
+
+  .historian-img {
+    flex-direction: column;
+  }
+  
+  .historian-img img {
+    max-height: 300px;
   }
 }

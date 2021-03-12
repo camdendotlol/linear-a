@@ -104,6 +104,14 @@ const resources: Array<Resource> = [
     type: ResourceType.Video,
     description: 'The Minoan civilization disappears from the historical record during a period known as the Bronze Age Collapse. Eric Cline is a historian and archaeologist who specializes in the era, and here he presents his theories for why this international collapse happened.',
     tags: ['History', 'Minoans']
+  },
+  {
+    author: 'Alex Gallafent',
+    title: 'Alice Kober: Unsung heroine who helped decode Linear B',
+    url: 'https://www.bbc.com/news/magazine-22782620',
+    type: ResourceType.Website,
+    description: 'Kober laid much of the groundwork for the decipherment of Linear B. The article includes descriptions of the techniques she used in her research, as well as biographical material.',
+    tags: ['Linear B', 'Decipherment']
   }
 ]
 

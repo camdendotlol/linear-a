@@ -138,8 +138,8 @@ const RebusGame:React.FC = () => {
   return (
     <div>
       <div className='container' style={{ maxWidth: '1000px' }}>
-        <div className='content has-text-centered has-text-white'>
-          <h4 className='title has-text-white'>Can you write &quot;<strong>{currentWord}</strong>&quot; with these symbols?</h4>
+        <div className='content has-text-centered has-text-black'>
+          <h4 className='title'>Can you write &quot;<strong>{currentWord}</strong>&quot; with these symbols?</h4>
           <p>Tip: Think about how each one is pronounced, and pick a combination of symbols whose pronunciation matches the word.</p>
           <p>Click on a symbol to add, click again to remove.</p>
         </div>
@@ -156,7 +156,7 @@ const RebusGame:React.FC = () => {
             className='button'
             onClick={() => pickNewWord(Object.keys(wordTable))}
           >
-            Next word
+            New word
           </button>
         </div>
       </div>

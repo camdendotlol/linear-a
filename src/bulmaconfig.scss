@@ -25,6 +25,7 @@ $primary: $pottery2;
 $link: $pink;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+$container-max-width: 600px;
 
 @import "~bulma/sass/utilities/initial-variables.sass";
 @import "~bulma/sass/utilities/derived-variables.sass";
