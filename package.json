@@ -3,17 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bulma": "^0.9.2",
+    "bulma": "^0.9.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^2.0.1"
+    "react-router-dom": "^5.2.1",
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -r docs && react-scripts build && mv build docs",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .tsx"
   },
@@ -37,23 +35,19 @@
     ]
   },
   "devDependencies": {
-    "typescript": "^4.3.2",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^13.1.9",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.12.2",
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.7",
-    "@types/react-router-dom": "^5.1.7",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
-    "eslint": "^7.28.0",
-    "eslint-plugin-import": "^2.23.4",
+    "typescript": "^4.4.2",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.8",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-no-loops": "^0.3.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.1"
   }
 }

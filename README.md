@@ -1,6 +1,6 @@
 # What is Linear A?
 
-(The development version of this site is temporarily available at [https://la.camdenmecklem.com/](https://la.camdenmecklem.com/))
+This site is temporarily available at [https://la.camdenmecklem.com/](https://la.camdenmecklem.com/). Someday I might add more info and put it up at a proper domain.
 
 Linear A is one of the most mysterious writing scripts in world history. Used by the Minoans on ancient Crete, Linear A seems to have been used in a wide range of fields, from trading to religious rites. Even as later Minoan scripts, such as Linear B, have been deciphered, Linear A remains undeciphered. Over the years, scholars have theorized many different languages that it might represent, ranging from an early form of Greek to an Indo-Iranian language, or even a language isolate.
 
@@ -22,9 +22,7 @@ To make hosting work with GitHub Pages, I had to replace the default build scrip
 
 ### How to run
 
-The project is set up with yarn, so you can start the dev build with ``yarn start`` and compile a production build with ``yarn build``.
-
-If you prefer npm you can delete ``yarn.lock`` and ``node_modules`` and run ``npm install``.
+You can start the dev build with ``npm start`` and compile a production build with ``npm run build``.
 
 ## License
 

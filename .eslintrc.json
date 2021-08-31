@@ -18,8 +18,7 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint",
-        "no-loops"
+        "@typescript-eslint"
     ],
     "rules": {
         "indent": [
@@ -38,8 +37,7 @@
             "error",
             "never"
         ],
-        "no-console": 1,
-        "no-loops/no-loops": 2
+        "no-console": 1
     },
     "settings": {
         "react": {
