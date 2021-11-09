@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Switch, Route, useLocation, Link } from 'react-router-dom'
+import { Routes, Route, useLocation, Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import HomePage from './HomePage'
 import Characters from './Characters/Characters'
@@ -31,23 +31,13 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Navbar />
-      <Switch>
-        <Route path='/history'>
-          <History />
-        </Route>
-        <Route path='/characters'>
-          <Characters />
-        </Route>
-        <Route path='/resources'>
-          <Resources />
-        </Route>
-        <Route path='/legal'>
-          <Legal />
-        </Route>
-        <Route path='/'>
-          <HomePage />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path='/history' element={<History />} />
+        <Route path='/characters' element={<Characters />} />
+        <Route path='/resources' element={<Resources />} />
+        <Route path='/legal' element={<Legal />} />
+        <Route path='/' element={<HomePage />} />
+      </Routes>
       <footer className={ 'hero mg-0 has-text-centered' + setFooterBackgroundColor() }>
         <div className='hero-body'>
           <p>
