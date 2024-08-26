@@ -1,7 +1,5 @@
 # What is Linear A?
 
-This site is temporarily available at [https://la.camdenmecklem.com/](https://la.camdenmecklem.com/). Someday I might add more info and put it up at a proper domain.
-
 Linear A is one of the most mysterious writing scripts in world history. Used by the Minoans on ancient Crete, Linear A seems to have been used in a wide range of fields, from trading to religious rites. Even as later Minoan scripts, such as Linear B, have been deciphered, Linear A remains undeciphered. Over the years, scholars have theorized many different languages that it might represent, ranging from an early form of Greek to an Indo-Iranian language, or even a language isolate.
 
 I created this website because I noticed that resources on Linear A tend to fit into one of two categories: 1) Good information but unattractive presentation, and 2) Slick presentation but questionable information. Inevitably, websites that look more appealing attract more visitors, especially those who are new to the topic. I wanted this website to serve as a pleasantly-designed, interactive introduction to Linear A that also serves as a stepping stone to other sources.
