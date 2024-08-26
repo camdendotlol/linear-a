@@ -26,7 +26,7 @@ You can start the dev build with ``npm start`` and compile a production build wi
 
 All original text on this site is licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). I also make use of third-party images, which are licensed under the indicated licenses.
 
-Source code is [available on GitHub](https://github.com/mythmakerseven/linear-a) and is licensed under the [MIT License](https://mit-license.org/).
+Source code is [available on GitHub](https://github.com/camdendotlol/linear-a) and is licensed under the [MIT License](https://mit-license.org/).
 
 This website uses [Bootstrap Icons](https://icons.getbootstrap.com/) under the [MIT License](https://github.com/twbs/icons/blob/main/LICENSE.md).
 
